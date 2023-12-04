@@ -32,15 +32,18 @@ public class MainEs1 {
                             inArr = scan.nextInt();
                             System.out.println("Inserisci un valore intero, che sarà la posizione del numero che andrai a sostituire (valore compreso da 1 a 4");
                             int position= scan.nextInt();
-                            System.out.println("hai sostituito "+ interi[position].getNumber() + " con " + inArr );
+                            System.out.println("hai sostituito "+ interi[position] + " con " + inArr );
                             interi[position]= new Interi(inArr);
                             interi[position].getNumber();
                             if(product(inArr)) {
                                 System.out.println("stop");
                                 break;
                             }
+                    }catch (InvalidNumberException e){
+                        System.err.println("(Il valore appena inserito non è stato registrato riporova)\n");
+                        System.out.println("Devi inserire un intero tra 1 e 10\n");
                     }catch (InputMismatchException e){
-                        System.out.println("Devi inserire un intero");
+                        System.out.println("Inserisci un intero e non una parola\n");
                     }
             }while(true);
 
