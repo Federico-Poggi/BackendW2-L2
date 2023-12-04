@@ -30,8 +30,8 @@ public class MainEs1 {
                     try {
                             System.out.println("Inserisci dei numeri interi da 1 a 10");
                             inArr = scan.nextInt();
-                            System.out.println("Inserisci un valore intero, che sarà la posizione del numero che andrai a sostituire (valore compreso da 1 a 4");
-                            int position= scan.nextInt();
+                            System.out.println("Inserisci un valore intero, che sarà la posizione del numero che andrai a sostituire (valore compreso da 1 a 5");
+                            int position= scan.nextInt()-1;
                             System.out.println("hai sostituito "+ interi[position] + " con " + inArr );
                             interi[position]= new Interi(inArr);
                             interi[position].getNumber();
@@ -44,6 +44,8 @@ public class MainEs1 {
                         System.out.println("Devi inserire un intero tra 1 e 10\n");
                     }catch (InputMismatchException e){
                         System.out.println("Inserisci un intero e non una parola\n");
+                    }catch (ArrayIndexOutOfBoundsException e){
+                        System.out.println("Svegliati ti ho detto da 1 a 5!");
                     }
             }while(true);
 
