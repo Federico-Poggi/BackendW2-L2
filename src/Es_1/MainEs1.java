@@ -21,8 +21,6 @@ public class MainEs1 {
             System.out.println(interi[i].getNumber());
         }
 
-
-
         {
 
             do {
@@ -48,9 +46,7 @@ public class MainEs1 {
                         System.out.println("Svegliati ti ho detto da 1 a 5!");
                     }
             }while(true);
-
                 System.out.println(Arrays.toString(interi));
-
             }
 
         }
