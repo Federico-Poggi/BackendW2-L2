@@ -8,21 +8,28 @@ public class Audi extends Auto implements ConsumiPerKM {
     MARCA brand;
     AUDI model;
     float kmLitro;
-    public Audi(int km, float consumedFuel, MARCA AUDI){
-        super(km,consumedFuel);
-        this.brand=AUDI;
+    public Audi(int km, float consumedFuel, String brand,String model1){
+        super(km,consumedFuel,brand);
+        model= AUDI.valueOf(model1);
     }
 
-    public AUDI getModel() {
-        return model;
+    @Override
+    public void setBrand(String brand) {
+        super.setBrand(brand);
     }
 
-    public void setModel(AUDI model) {
-        this.model = model;
+    public MARCA getBrand() {
+        return brand;
     }
+
 
     @Override
     public void ConsumiPerKM() {
         this.kmLitro=this.kmTravelled/this.consumedFuel;
+    }
+
+    @Override
+    public String toString() {
+        return "Brand: " +this.brand + "\n"+ "Model: " + this.model +"\n" + "km: " + this.kmTravelled +"}";
     }
 }
